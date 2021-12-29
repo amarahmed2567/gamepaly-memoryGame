@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+body{
+    background-color: #000;
+}
+/*start nav bar */
+.logo{
+font-family: 'Satisfy', cursive;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #000;
+    background-color: rgb(233, 233, 233);
+    padding: 1rem ;
+    user-select: none;
+}
+nav .list{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+nav .list li{
+    position: relative;
+}
+nav .list li a{
+text-decoration: none;
+margin:0 10px;
+color: #000;
+font-weight: bold;
+transition: color .2s linear;
+}
+nav .list li a:hover{
+    color: rgb(0, 0, 255);
+}
+a::before{
+    content:"" ;
+    width: 0%;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    background-color: #000;
+    z-index: -1000;
+    transition: width .2s linear;
+    border-radius: 40%;
+    
+}
+a:hover::before{
+    width: 100%;
+    z-index: 1000;
+
+}
+/*end nav bar */
+/*start start game*/
+.start-game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    inset: 40%;
+    transform: translate(-50,50%);
+}
+.start-game h1{
+    color: rgb(60, 60, 240);
+}
+.start-game button{
+    border:none;
+    background-color: #fff;
+    margin-top:20px ;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    color: #000;
+    transition: background .3s ease-in-out;
+    cursor: pointer;
+    font-size: 15px;
+}
+.start-game button:hover{
+    color: #fff;
+    background-color: blue;
+}
+/*end start game*/
+
+
